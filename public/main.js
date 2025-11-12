@@ -65,13 +65,21 @@ const revealObserver = new IntersectionObserver(handleReveal, {
 // Service Worker Registration
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('SW registered successfully');
-      })
-      .catch(error => {
-        console.log('SW registration failed');
-      });
+    // Try to unregister any existing registrations first (helps during development so cached scripts don't override changes)
+    navigator.serviceWorker.getRegistrations().then(regs => {
+      regs.forEach(r => r.unregister());
+      // then register afresh
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered successfully');
+        })
+        .catch(error => {
+          console.log('SW registration failed');
+        });
+    }).catch(() => {
+      // Fallback: try direct register
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
   }
 }
 
@@ -96,7 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initBlurUp();
   initProductFilters();
   initLightbox();
-  initCarousel();
+  // initCarousel may have been removed; guard the call to avoid a runtime error
+  if (typeof initCarousel === 'function') initCarousel();
+  initCustomCursor();
 });
 
 // Scroll event listener for progress bar
@@ -184,15 +194,17 @@ function initProductFilters() {
   const toolbar = document.getElementById('productFilter');
   if (!toolbar) return;
   const cards = Array.from(document.querySelectorAll('[data-category]'));
+  const buttons = Array.from(toolbar.querySelectorAll('button[data-filter]'));
 
-  toolbar.addEventListener('click', (e) => {
-    const btn = e.target.closest('button[data-filter]');
-    if (!btn) return;
+  // Initialize transition classes on cards
+  cards.forEach(card => {
+    card.classList.add('card-transition', 'card-visible');
+  });
 
-    const filter = btn.getAttribute('data-filter');
-    // Toggle pressed state
-    toolbar.querySelectorAll('button[data-filter]').forEach(b => {
-      const isActive = b === btn;
+  function applyFilter(filter) {
+    // Update pressed/active state
+    buttons.forEach(b => {
+      const isActive = b.getAttribute('data-filter') === filter;
       b.setAttribute('aria-pressed', String(isActive));
       b.classList.toggle('bg-zapGreen', isActive);
       b.classList.toggle('text-white', isActive);
@@ -201,12 +213,45 @@ function initProductFilters() {
       b.classList.toggle('ring-gray-200', !isActive);
     });
 
+    // Show/hide cards (support multiple categories on a card separated by spaces/commas)
     cards.forEach(card => {
-      const cat = card.getAttribute('data-category');
-      const show = filter === 'todos' || cat === filter;
-      card.style.display = show ? '' : 'none';
+      const raw = card.dataset.category || '';
+      const cats = raw.split(/[ ,]+/).filter(Boolean);
+      const show = filter === 'todos' || cats.includes(filter);
+
+      if (show) {
+        card.classList.remove('hidden', 'card-hidden');
+        // force reflow to allow transition
+        void card.offsetWidth;
+        card.classList.add('card-visible');
+      } else {
+        card.classList.remove('card-visible');
+        card.classList.add('card-hidden');
+        setTimeout(() => card.classList.add('hidden'), 240);
+      }
+    });
+  }
+
+  // Click and keyboard support
+  toolbar.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-filter]');
+    if (!btn) return;
+    applyFilter(btn.getAttribute('data-filter'));
+  });
+
+  // Keyboard: Enter/Space on buttons
+  buttons.forEach(b => {
+    b.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        applyFilter(b.getAttribute('data-filter'));
+      }
     });
   });
+
+  // Set initial state from the button that has aria-pressed=true or default to 'todos'
+  const initial = buttons.find(b => b.getAttribute('aria-pressed') === 'true');
+  applyFilter(initial ? initial.getAttribute('data-filter') : 'todos');
 }
 
 // Lightbox para imagens dos cards
@@ -231,8 +276,8 @@ function initLightbox() {
     imgEl.src = '';
   }
 
-  // Clique/teclado nas imagens dos cards (Produtos e Destaques)
-  document.querySelectorAll('#produtos img, #destaques img').forEach(img => {
+  // Clique/teclado nas imagens dos produtos (lightbox)
+  document.querySelectorAll('#produtos img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => open(img.src, img.alt));
     img.addEventListener('keydown', (e) => {
@@ -249,13 +294,85 @@ function initLightbox() {
 }
 
 // Carousel simples com scroll-snap
-function initCarousel() {
-  const el = document.getElementById('destaquesCarousel');
-  const prev = document.getElementById('destaquesPrev');
-  const next = document.getElementById('destaquesNext');
-  if (!el || !prev || !next) return;
+// Carousel init removed (destaques carousel was removed from the page)
 
-  const step = () => Math.min(400, Math.max(240, el.clientWidth * 0.5));
-  prev.addEventListener('click', () => el.scrollBy({ left: -step(), behavior: 'smooth' }));
-  next.addEventListener('click', () => el.scrollBy({ left: step(), behavior: 'smooth' }));
+// Minimal, elegant custom cursor (dot + ring)
+function initCustomCursor() {
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  if (!finePointer) return; // Keep native cursor on touch/coarse
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.body.classList.add('cursor-enhanced');
+
+  const dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  const ring = document.createElement('div');
+  ring.className = 'cursor-ring';
+  document.body.appendChild(ring);
+  document.body.appendChild(dot);
+
+  // Ensure initial colors are applied immediately (prevents older cached scripts or later state toggles from reverting)
+    try {
+    dot.style.background = '#6fa1de';
+    ring.style.borderColor = '#001D39';
+  } catch (e) {
+    // ignore
+  }
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+  let ringScale = 1;
+  let rafId = null;
+
+  const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+  function render() {
+    const speed = prefersReduced ? 1 : 0.18;
+    ringX = lerp(ringX, mouseX, speed);
+    ringY = lerp(ringY, mouseY, speed);
+
+    // Center elements on pointer
+    dot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`;
+    ring.style.transform = `translate3d(${ringX - 14}px, ${ringY - 14}px, 0) scale(${ringScale})`;
+
+    rafId = requestAnimationFrame(render);
+  }
+
+  const show = () => { dot.style.opacity = '1'; ring.style.opacity = '1'; };
+  const hide = () => { dot.style.opacity = '0'; ring.style.opacity = '0'; };
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    if (rafId === null) render();
+    show();
+  });
+  document.addEventListener('mouseenter', show);
+  document.addEventListener('mouseleave', hide);
+
+  document.addEventListener('mousedown', () => { ringScale = 0.9; });
+  document.addEventListener('mouseup', () => { ringScale = 1; });
+
+  const onInteractiveHover = (active) => {
+    ringScale = active ? 1.25 : 1;
+    // Use theme colors: keep highlight consistent for both active and inactive states
+  const highlight = '#6fa1de';
+    ring.style.borderColor = '#001D39';
+    dot.style.background = highlight;
+  };
+
+  function handleHover(e) {
+    const isInteractive = !!e.target.closest('a, button, [role="button"], .btn-primary, .btn-secondary, input, textarea, select');
+    onInteractiveHover(isInteractive);
+  }
+
+  document.addEventListener('mouseover', handleHover);
+  document.addEventListener('focusin', handleHover);
+
+  // Hide cursor over iframes (can't track)
+  document.querySelectorAll('iframe').forEach((f) => {
+    f.addEventListener('mouseenter', hide);
+    f.addEventListener('mouseleave', show);
+  });
 }

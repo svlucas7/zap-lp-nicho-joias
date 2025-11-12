@@ -1,32 +1,65 @@
-# Portfólio – Landing Page para Cerimonialistas
+﻿# Landing Page — Nicho Joias
 
-Landing page desenvolvida por mim para o nicho de cerimonialistas, publicada no Netlify e disponível neste repositório como parte do meu portfólio.
+![Preview](docs/preview.png)
 
-## Sobre o projeto
-Esta landing page foi criada para apresentar serviços e produtos gráficos de forma moderna, responsiva e otimizada para portfólio. Utilizei HTML5, Tailwind CSS e JavaScript, com animações suaves, PWA básico e foco em experiência mobile.
 
-## Tecnologias e diferenciais
-- **HTML5 semântico**
-- **Tailwind CSS** para agilidade e design responsivo
-- **JavaScript** para interatividade, animações e PWA
-- **Service Worker** para navegação offline
-- **Integração RD Station** para captação de leads
-- **Hospedagem Netlify** (link abaixo)
-- **Documentação e organização** seguindo boas práticas
+Este repositório faz parte do meu portfólio no GitHub. É uma landing page de Joias desenvolvida profissionalmente (no contexto do meu trabalho) e publicada aqui para demonstrar meu processo, padrões e qualidade de entrega.
 
-## Estrutura do projeto
-- `index.html`: Página principal
-- `public/`: Scripts, service worker, imagens
-- `src/input.css`: CSS customizado
-- `docs/`: Documentação extra
-- Configurações: `netlify.toml`, `package.json`, `postcss.config.js`, `tailwind.config.js`
+- Repositório: https://github.com/svlucas7/zap-lp-nicho-joias
+- Tipo: Landing Page estática focada em conversão
+- Tom: portfólio profissional (mostrando boas práticas e organização)
 
-## Links
-> Se desejar publicar, adicione aqui o link público e o repositório correspondente.
 
-## Meu objetivo
-Este projeto demonstra minha capacidade de criar landing pages profissionais, organizadas e prontas para conversão, com código limpo, responsivo e fácil de manter.
 
----
+## ✨ Visão geral
 
-> Projeto desenvolvido e mantido por Lucas Silva. Todos os direitos reservados.
+- Seção hero com proposta de valor clara e CTA destacado
+- Blocos de benefícios, prova social e FAQ para reduzir objeções
+- Estrutura leve, responsiva e otimizada para velocidade
+- Pronto para integrar ferramentas de marketing (pixel, tag manager, forms)
+
+## 🛠️ Tecnologias e padrões
+
+- HTML semântico e Tailwind CSS (utilitários e componetização leve)
+- JavaScript vanilla para interações pontuais (sem dependências pesadas)
+- Assets otimizados (imagens com lazy loading quando aplicável)
+- Configuração opcional de deploy via Netlify ou GitHub Pages
+
+## 📁 Estrutura do projeto
+
+- index.html — entrada única com layout e seções da LP
+- public/ — imagens e assets estáticos
+- src/ — arquivos fonte (quando aplicável)
+- 	ailwind.config.js e postcss.config.js  configuração de estilo (quando presente)
+- 
+etlify.toml  configuração de deploy (quando usado)
+
+##  Como rodar localmente
+
+Windows PowerShell:
+
+`powershell
+# Abrir no navegador (visualização simples)
+Start-Process .\index.html
+
+# ou servir em HTTP local (recomendado para testar lazy loading)
+python -m http.server 8000
+# Acesse: http://localhost:8000
+`
+
+## 🚀 Deploy
+
+- Netlify: arrastar a pasta do projeto ou conectar o repositório e configurar build (se usar Tailwind)
+- GitHub Pages: habilitar Pages na branch main e apontar a raiz do projeto
+
+## 📌 Notas de design/conteúdo
+
+- Copywriting pensado para Joias, com foco em clareza e escaneabilidade
+- Componentes reutilizáveis, tokens de espaçamento e tipografia consistentes
+- Preparado para testes A/B (variações de heading/CTA/ordem de blocos)
+
+## 🧑‍💻 Sobre este projeto
+
+Este trabalho foi desenvolvido no contexto da empresa em que atuo, e publicado aqui como parte do meu portfólio. Meu objetivo é mostrar como estruturo LPs de nicho com foco em conversão, performance e manutenção simples.
+
+ Lucas (@svlucas7)

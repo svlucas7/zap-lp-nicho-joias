@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        zapGreen: "#00d355",
+        // synchronized with the landing theme (darker gradient companion applied in styles)
+        zapGreen: "#6fa1de",
+        zapGray: "#001D39",
         zapOrange: "#F99D1C",
         zapBlue: "#00AEEF"
       },
