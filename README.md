@@ -1,5 +1,12 @@
 ﻿# Landing Page — Nicho Joias
 
+[![Demo](https://img.shields.io/badge/demo-online-success?logo=netlify)](https://nichojoias.netlify.app/)
+
+| Tema | Stack | Demo |
+|---|---|---|
+| Joias | HTML, Tailwind CSS, JS | https://nichojoias.netlify.app/ |
+
+
 ![Preview](docs/preview.png)
 
 
