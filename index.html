@@ -1,0 +1,823 @@
+﻿p<!doctype html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio | Materiais Gráficos para Joalherias & Relógios</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KCGNMGLN');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="description" content="Materiais gráficos personalizados para joalherias e relojoarias: cartões, embalagens, brindes e sinalização que valorizam a apresentação das suas peças e encantam clientes." />
+  
+  <!-- Favicon -->
+  <!-- Mantemos apenas o favicon SVG inline mais leve -->
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:title" content="Portfólio | Materiais Gráficos para Joalherias & Relógios">
+  <meta property="og:description" content="Materiais gráficos personalizados para joalherias e relojoarias: cartões, embalagens, brindes e sinalização que valorizam a apresentação das suas peças e encantam clientes." />
+  <meta property="og:image" content="public/assets/images/banner-hero-section.avif">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="/">
+  <meta property="twitter:title" content="Portfólio | Materiais Gráficos para Joalherias & Relógios">
+  <meta property="twitter:description" content="Materiais gráficos personalizados para joalherias e relojoarias: cartões, embalagens, brindes e sinalização que valorizam a apresentação das suas peças e encantam clientes." />
+  <meta property="twitter:image" content="public/assets/images/banner-hero-section.avif">
+  
+  <!-- Schema.org markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Portfólio de Materiais Gráficos para Joias & Relógios",
+    "description": "Soluções gráficas, embalagens e PDV para joalherias e relojoarias — destaque sua marca com materiais elegantes e personalizados."
+  }
+  </script>
+  <!-- Products as ItemList for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+  "name": "Catálogo de Produtos - Joias & Relógios",
+    "itemListOrder": "http://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+  {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Cartões de visita","image":"/public/assets/images/Cartão de visita.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Pastas","image":"/public/assets/images/Pastas.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Canetas","image":"/public/assets/images/Canetas.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Papel timbrado","image":"/public/assets/images/Timbrado.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Cadernetas","image":"/public/assets/images/Cadernos.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Agendas","image":"/public/assets/images/Agenda.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Planners","image":"/public/assets/images/Planner.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Calendários","image":"/public/assets/images/Calendários.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Placas PVC","image":"/public/assets/images/Placa pvc.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"Chaveiros","image":"/public/assets/images/Chaveiro.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":11,"item":{"@type":"Product","name":"Mousepads","image":"/public/assets/images/Mousepad.avif","url":"/#produtos"}},
+  {"@type":"ListItem","position":12,"item":{"@type":"Product","name":"Tapete capacho","image":"/public/assets/images/Tapete.avif","url":"/#produtos"}}
+      ]
+  }
+  </script>
+  <!-- Canonical e Preload -->
+  <link rel="canonical" href="/" />
+  <link rel="preload" as="image" href="public/assets/images/banner-hero-section.avif" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN + config personalizada -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+          /* Atualizado para o novo tema: destaque claro e secundária escura */
+          zapGreen: '#6fa1de', /* destaque principal (ajustado para mais contraste) */
+          zapGray: '#001D39',  /* secundária / texto escuro */
+          zapAccent: '#001D39', /* secundária (alias) */
+            lightGray: '#f6f7f8',
+          darkGray: '#001D39'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'float': 'float 3s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            countUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Focus states acessíveis e discretos */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid rgba(255, 75, 34, 0.6);
+      outline-offset: 2px;
+      border-radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    
+  /* Scroll Progress Bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+  background: linear-gradient(90deg, #6fa1de, #4a86c0);
+      z-index: 9999;
+      transition: width 0.1s ease;
+      box-shadow: 0 1px 6px rgba(216, 190, 148, 0.2);
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+  background: linear-gradient(135deg, #6fa1de, #4a86c0);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+  box-shadow: 0 4px 20px rgba(216, 190, 148, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 29, 57, 0.12);
+    }
+    
+    /* Removidos estilos de elementos não utilizados (WhatsApp/Pulse) para visual mais limpo */
+    
+    /* Enhanced Gradients */
+    .gradient-bg-1 {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    }
+    
+    .gradient-bg-2 {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    }
+    
+    .gradient-bg-3 {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 30%, #f1f3f4 70%, #f8f9fa 100%);
+    }
+
+    /* Neutral subtle gradient for product section (light, non-intrusive) */
+    .gradient-neutral {
+      background: linear-gradient(180deg, rgba(246,247,248,1) 0%, rgba(241,243,244,0.9) 45%, rgba(255,255,255,1) 100%);
+    }
+    
+    /* Parallax Effects */
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Lazy Loading */
+    img[data-src] {
+      filter: blur(5px);
+      transition: filter 0.3s;
+    }
+    
+    img[data-loaded="true"] {
+      filter: blur(0px);
+    }
+    
+    /* Removido badge de urgência (não utilizado) */
+    
+    .section-gradient { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); }
+  .card-hover { transition: transform 0.2s ease; }
+  .card-hover:hover { transform: translateY(-2px); }
+    /* Product badge style using secondary accent */
+  .product-badge { display:inline-block; font-size:0.6875rem; font-weight:600; padding:0.25rem 0.5rem; border-radius:9999px; background: linear-gradient(90deg,#6fa1de,#4a86c0); color:#001D39; }
+    /* Product show/hide transition used by filters */
+    .card-transition {
+      transition: opacity 220ms ease, transform 220ms ease;
+      will-change: opacity, transform;
+    }
+    .card-hidden {
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+    }
+    .card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Animação de reveal mais confiável (somente quando JS está ativo) */
+    html.js-enabled .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+    }
+    html.js-enabled .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Blur-up LQIP para imagens */
+    .blur-up { filter: blur(12px); transform: scale(1.02); transition: filter .5s ease, transform .5s ease; }
+    .blur-up.loaded { filter: blur(0); transform: scale(1); }
+    
+    /* Botões aprimorados */
+    .btn-primary {
+  background: linear-gradient(135deg, #6fa1de, #4a86c0);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(0,0,0,0.04);
+      cursor: pointer;
+      transition: background-color 0.25s ease, transform 0.15s ease;
+      text-align: center;
+      justify-content: center;
+    }
+  .btn-primary:hover { background: linear-gradient(135deg, #4a86c0, #6fa1de); transform: translateY(-1px); color: #fff; }
+    .btn-primary:active { transform: translateY(0); }
+    
+    .btn-secondary {
+      background: transparent;
+    color: #001D39;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 9999px;
+    border: 1.5px solid #001D39;
+      cursor: pointer;
+      transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+      text-align: center;
+      justify-content: center;
+    }
+    .btn-secondary:hover { color: #fff; background: linear-gradient(135deg, #001D39, #0b2b4a); border-color: #001D39; }
+    
+    .btn-small {
+      font-size: 0.875rem;
+      padding: 0.75rem 1.5rem;
+    }
+    
+    .btn-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    
+    .btn-icon svg {
+      transition: transform 0.3s ease;
+    }
+    
+    .btn-icon:hover svg {
+      transform: translateX(2px);
+    }
+    
+    /* Animação melhorada para imagem do hero */
+    .hero-image-container {
+        /* Visual do hero minimalista: sem efeitos 3D/rotação no hover */
+        perspective: none;
+    }
+    
+    /* Animação especial para o botão CTA principal */
+    .btn-explore {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-explore::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .btn-explore:hover::before {
+      left: 100%;
+    }
+    
+    .btn-explore svg {
+      transition: transform 0.3s ease;
+    }
+    
+    .btn-explore:hover svg {
+      transform: translateX(4px);
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(218, 190, 148, 0.22); }
+      50% { box-shadow: 0 0 0 8px rgba(218, 190, 148, 0); }
+    }
+    
+    .btn-explore {
+      animation: pulse-glow 2s infinite;
+    }
+    
+    .btn-explore:hover {
+      animation: none;
+      transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(216, 190, 148, 0.3);
+    }
+    /* Stronger hero CTA pulse (visible, but respect reduced-motion) */
+    @keyframes heroPulse {
+      0% { transform: translateY(0) scale(1); box-shadow: 0 8px 20px rgba(216,190,148,0.12); }
+      50% { transform: translateY(-3px) scale(1.04); box-shadow: 0 20px 40px rgba(216,190,148,0.18); }
+      100% { transform: translateY(0) scale(1); box-shadow: 0 8px 20px rgba(216,190,148,0.12); }
+    }
+
+    .hero-cta {
+      animation: heroPulse 2.2s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-cta { animation: none !important; }
+    }
+    
+    /* Animação para o indicador de scroll "Descubra mais" */
+    .scroll-indicator {
+      animation: bounce-gentle 2s infinite;
+    }
+    
+    @keyframes bounce-gentle {
+      0%, 20%, 50%, 80%, 100% { 
+        transform: translateY(0); 
+      }
+      40% { 
+        transform: translateY(-8px); 
+      }
+      60% { 
+        transform: translateY(-4px); 
+      }
+    }
+    
+    .scroll-indicator:hover {
+      animation: none;
+      transform: translateY(-2px);
+    }
+    
+    .scroll-indicator svg {
+      transition: transform 0.3s ease;
+    }
+    
+    .scroll-indicator:hover svg {
+      transform: translateY(2px);
+    }
+
+    /* Position the scroll indicator near the bottom edge; respect safe-area (notch) and tighten offsets
+       so the indicator sits lower and avoids overlapping the CTA. */
+    .scroll-indicator-wrapper { bottom: env(safe-area-inset-bottom, 0px); }
+    
+    /* Animações para imagens das seções */
+    .section-image-container {
+      transition: all 0.3s ease;
+    }
+    
+    .section-image-container:hover .section-image {
+      transform: rotate(-2deg) scale(1.03);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 16px 32px -16px rgba(0, 0, 0, 0.3);
+    }
+    
+    .section-image {
+      transition: all 0.7s ease;
+    }
+    
+    /* Fallback para garantir visibilidade */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: translateY(0);
+        transition: none;
+      }
+      .animate-float, .animate-slide-up, .animate-fade-in {
+        animation: none !important;
+      }
+      .btn-primary, .btn-secondary {
+        transform: none !important;
+      }
+      /* Pause hero video for reduced motion preference */
+      #heroVideo {
+        animation: none !important;
+      }
+    }
+
+    /* Editorial tweaks: tipografia e ritmo */
+    h1 { letter-spacing: -0.01em; }
+    @media (min-width: 1024px) { h1 { letter-spacing: -0.015em; } }
+    #produtos h2 { letter-spacing: -0.01em; }
+    .card-hover h3 { letter-spacing: -0.005em; }
+    
+    /* Micro-interações: sublinhado discreto nos links do nav */
+    header nav a { position: relative; }
+    header nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0;
+  background: #6fa1de;
+      border-radius: 9999px;
+      transition: width 200ms ease;
+    }
+    header nav a:hover::after,
+    header nav a[aria-current="page"]::after { width: 100%; }
+  header nav a[aria-current="page"] { color: #6fa1de; }
+
+    /* Auto-hide header */
+    header {
+      transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+      will-change: transform;
+    }
+    header.is-hidden {
+      transform: translateY(-100%);
+      box-shadow: none !important;
+      background-color: rgba(255,255,255,0.75);
+    }
+
+    /* Lightbox helpers */
+    .lightbox-backdrop { background: rgba(0,0,0,0.75); backdrop-filter: saturate(120%) blur(4px); }
+    .no-scroll { overflow: hidden; }
+
+    /* Carousel: hide scrollbars for a cleaner look */
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+
+    /* Utility: clamp text to 3 lines (fallbacks for webkit) */
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      overflow: hidden;
+    }
+
+    /* Custom cursor: minimal, sophisticated */
+    @media (pointer: fine) {
+      body.cursor-enhanced { cursor: none; }
+      .cursor-dot, .cursor-ring {
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+        .cursor-dot {
+          width: 6px; height: 6px;
+          border-radius: 9999px;
+          background: #6fa1de;
+        box-shadow: 0 0 0 1px rgb(255, 255, 255);
+        transition: opacity .2s ease;
+      }
+      .cursor-ring {
+        width: 28px; height: 28px;
+        border-radius: 9999px;
+          border: 1.5px solid #001D39;
+        transition: opacity .25s ease;
+        backdrop-filter: saturate(120%) blur(0.5px);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cursor-ring, .cursor-dot { transition: none; }
+      }
+    }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23008BE9'/></svg>">
+</head>
+<body class="min-h-full font-sans text-zapGray bg-white">
+  <!-- Skip link para acessibilidade -->
+  <a href="#produtos" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:bg-white focus:text-zapGray focus:px-4 focus:py-2 focus:rounded-lg focus:ring-2 focus:ring-zapGreen/40">Pular para conteúdo</a>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCGNMGLN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+  
+  <!-- WhatsApp Floating Button removido para versão portfólio -->
+
+  <main class="pt-0">
+    <!-- Seção Início / Hero -->
+  <section id="inicio" class="relative bg-white">
+  <div class="relative mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 pt-8 pb-4 lg:pt-16 lg:pb-12">
+    <div class="grid grid-cols-1 gap-6 lg:gap-10 items-center">
+      <div class="flex justify-center animate-slide-up">
+        <div class="relative hero-image-container group mb-2 md:mb-3 w-full">
+          <!-- Banner now stretches to the container width to align with product grid; focal point centered -->
+          <img src="public/assets/images/banner-hero-section.avif" alt="Materiais gráficos para joalherias e relojoarias" class="relative w-full rounded-2xl section-image object-contain object-center h-auto max-h-[420px] md:max-h-[520px] lg:max-h-[560px]" loading="eager" decoding="async">
+        </div>
+      </div>
+            <div class="text-center space-y-6 animate-fade-in">
+            <div class="space-y-6">
+                      <h1 class="text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.25] md:leading-[1.2] text-zapGray text-center">
+                                                Materiais Gráficos para Joalherias & Relógios
+                                                <span class="block py-1" style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">
+                                                  Destaque a sua loja com <span style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:800;">materiais personalizados</span>
+                                                </span>
+                                              </h1>
+                                  <p class="text-lg lg:text-xl text-zapGray/75 font-normal leading-relaxed max-w-3xl mx-auto text-center">
+                                                          Se você trabalha com <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">joias</strong> ou <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">relógios</strong> e quer valorizar ainda mais a apresentação dos seus produtos, <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">materiais gráficos personalizados</strong> são a escolha certa. Eles ajudam a reforçar a identidade visual da sua marca e encantam seus clientes com um toque de sofisticação e elegância.
+
+                                                          <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:800;">Valorize sua marca</strong> com detalhes que impressionam e crie uma experiência memorável desde o primeiro contato.
+                                                        </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8 md:mb-12">
+              <a href="#produtos" class="btn-primary btn-explore hero-cta">
+                <span>Ver catálogo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Indicador de scroll -->
+  <!-- Indicador de scroll removido -->
+    </section>
+
+    <!-- Destaques section removed to shorten the landing page per request -->
+
+    <!-- Seção Produtos - Apresentação e Grid -->
+  <section id="produtos" class="pt-12 pb-24 lg:pt-16 lg:pb-24 gradient-neutral">
+      <div class="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div class="text-center reveal">
+          <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-zapGray mb-2">
+            Insumos que encantam clientes
+           <!-- <span class="block text-base text-zapGray/70 mt-2">Sua marca, onde importa: balcões, displays, brindes e impressos.</span>-->
+          </h2>
+          <div class="mx-auto mb-6 h-px w-16 rounded-full bg-gradient-to-r" style="background:linear-gradient(90deg,#6fa1de,#4a86c0);" aria-hidden="true"></div>
+        </div>
+        <!-- Barra de filtros -->
+  <div class="mt-10 sticky top-4 z-10 bg-white/70 backdrop-blur py-3 rounded-xl ring-1 ring-gray-100">
+          <div id="productFilter" class="flex flex-wrap items-center gap-2 justify-center" role="toolbar" aria-label="Filtrar produtos">
+            <button class="px-4 py-2 rounded-full text-sm font-medium bg-zapGreen text-white ring-1 ring-zapGreen" data-filter="todos" aria-pressed="true">Todos</button>
+            <button class="px-4 py-2 rounded-full text-sm font-medium text-zapGray ring-1 ring-gray-200 hover:bg-lightGray" data-filter="impressos" aria-pressed="false">Impressos</button>
+            <button class="px-4 py-2 rounded-full text-sm font-medium text-zapGray ring-1 ring-gray-200 hover:bg-lightGray" data-filter="pdv" aria-pressed="false">PDV & Sinalização</button>
+            <button class="px-4 py-2 rounded-full text-sm font-medium text-zapGray ring-1 ring-gray-200 hover:bg-lightGray" data-filter="embalagens" aria-pressed="false">Embalagens</button>
+            <button class="px-4 py-2 rounded-full text-sm font-medium text-zapGray ring-1 ring-gray-200 hover:bg-lightGray" data-filter="brindes" aria-pressed="false">Brindes</button>
+            <button class="px-4 py-2 rounded-full text-sm font-medium text-zapGray ring-1 ring-gray-200 hover:bg-lightGray" data-filter="uniformes" aria-pressed="false">Uniformes</button>
+            <button class="px-4 py-2 rounded-full text-sm font-medium text-zapGray ring-1 ring-gray-200 hover:bg-lightGray" data-filter="other" aria-pressed="false">Outros</button>
+          </div>
+        </div>
+  <!-- Grid de produtos atualizado para o tema joalherias/relojoarias (itens disponíveis nas imagens) -->
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" role="list" aria-label="Produtos">
+
+          <!-- Cartões de visita -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Cartão de visita.avif" alt="Cartões de visita" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Cartões de Visita</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Cartões personalizados para causar uma primeira impressão impecável — diversos modelos, acabamentos e formatos (91x51 mm).</p>
+          </div>
+
+          <!-- Panfletos -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Panfletos.avif" alt="Panfletos" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Panfletos</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Perfeitos para divulgar lançamentos e promoções — diversos tamanhos, modelos e acabamentos (4x4, 4x1, 4x0).</p>
+          </div>
+
+          <!-- Catálogos -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Catálogo.avif" alt="Catálogos" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Catálogos</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Catálogos para apresentar suas coleções com elegância — encadernação, papéis (AP, Couchê) e múltiplas opções de páginas.</p>
+          </div>
+
+          <!-- Sacolas -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="embalagens">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Sacola.avif" alt="Sacolas" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Embalagens</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Sacolas</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Reforçam o valor premium da marca — sacolas em papel, tecido Oxford ou plástico, diversos modelos e acabamentos.</p>
+          </div>
+
+          <!-- Chaveiros -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="brindes">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Chaveiro.avif" alt="Chaveiros" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Brindes</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Chaveiros</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Chaveiros personalizados em metal ou acrílico — uma lembrança duradoura que fortalece a relação com o cliente.</p>
+          </div>
+
+          <!-- Camisas / Uniformes -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="uniformes">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Camisas.avif" alt="Uniformes" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Uniformes</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Camisas / Uniformes</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Uniformes personalizados (baby look, manga curta/longa) que trazem profissionalismo e consistência à equipe.</p>
+          </div>
+
+          <!-- Canetas -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="brindes">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Canetas.avif" alt="Canetas" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Brindes</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Canetas</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Canetas personalizadas em materiais variados — bambu, plástico, metal — ideais como brinde ou presente promocional.</p>
+          </div>
+
+          <!-- Placas PVC / PDV -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="pdv">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Placa PVC.avif" alt="Placas PVC" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">PDV</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Placas PVC</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Sinalização interna e externa, placas de mesa e display — PVC 0,50mm e acabamentos para vitrines e balcões.</p>
+          </div>
+
+          <!-- Adesivos / Rótulos -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Adesivos.avif" alt="Adesivos" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Adesivos & Rótulos</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Rótulos para embalagens, caixas e vitrines — tamanhos e materiais personalizados, impressão colorida.</p>
+          </div>
+
+          <!-- Display de PIX -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="pdv">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Display de pix.avif" alt="Display de PIX" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">PDV</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Display de PIX</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Displays compactos para facilitar pagamentos via QR Code — ideal para balcões e vitrines.</p>
+          </div>
+
+          <!-- Envelope -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Envelope.avif" alt="Envelopes" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Envelopes</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Envelopes timbrados para envio e apresentação — diversos tamanhos e opções de papel.</p>
+          </div>
+
+          <!-- Pastas -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Pastas.avif" alt="Pastas" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Pastas</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Pastas corporativas e para atendimento — opções com bolso, elástico e impressão personalizada.</p>
+          </div>
+
+          <!-- Tapete / Capacho -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="pdv">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Tapete.avif" alt="Tapete capacho" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">PDV</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Tapete / Capacho</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Tapetes personalizados para loja, ideais para recepção e vitrines com opção antiderrapante.</p>
+          </div>
+
+          <!-- Timbrado -->
+          <div class="bg-white/95 rounded-2xl ring-1 ring-gray-100 p-5 hover:bg-gray-50 card-hover reveal" role="listitem" data-category="impressos">
+            <div class="mb-3 overflow-hidden rounded-lg bg-white aspect-square ring-1 ring-gray-200">
+              <img src="public/assets/images/Produtos - Timbrado.avif" alt="Papel timbrado" class="w-full h-full object-contain section-image blur-up p-4" loading="lazy" decoding="async" />
+            </div>
+            <div class="mt-1"><span class="product-badge">Impressos</span></div>
+            <h3 class="text-lg font-semibold text-zapGray">Papel Timbrado</h3>
+            <p class="mt-2 text-zapGray/70 text-sm leading-relaxed">Papel timbrado para correspondências e documentos oficiais — opções em offset e couchê.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Seção de Portfólio para Parceiros (versão minimalista) -->
+    <section class="py-16 lg:py-20 gradient-bg-1">
+      <div class="mx-auto max-w-3xl px-6 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+            <h2 class="text-3xl lg:text-5xl font-semibold text-zapGray mb-4 tracking-tight">
+            Sua marca, nossa expertise em <span class="bg-clip-text text-transparent" style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text;">produtos e materiais gráficos</span>
+          </h2>
+          <div class="mx-auto mb-6 h-px w-16 rounded-full bg-gradient-to-r" style="background:linear-gradient(90deg,#6fa1de,#4a86c0);" aria-hidden="true"></div>
+          <p class="text-lg lg:text-xl text-zapGray/70 mb-6">
+            <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">Atendimento dedicado</strong> e <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">entregas pontuais</strong> para <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700;">joalherias e relojoarias</strong> — embalagens, brindes e impressos que <strong style="background:linear-gradient(90deg,#6fa1de,#4a86c0); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:800">valorizam a apresentação das suas peças</strong> e encantam seus clientes.
+          </p>
+          <p class="text-base text-zapGray/80">
+            Qualidade • Variedade • Suporte ágil
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white" style="background:#373737;">
+    <div class="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Descrição institucional -->
+        <div class="text-center lg:text-left">
+          <p class="text-white/90 max-w-lg mx-auto lg:mx-0 leading-relaxed text-lg">
+            Especialistas em materiais gráficos para joalherias e relojoarias.
+            Sua parceira para valorizar a apresentação das peças com sofisticação, elegância e cuidado.
+          </p>
+          <p class="mt-6 text-sm text-white/70">© <span id="year"></span> Portfólio de Materiais Gráficos.</p>
+        </div>
+
+        <!-- Links de navegação -->
+        <div class="text-center lg:text-left">
+          <h4 class="font-semibold text-white mb-6 text-xl">Navegação</h4>
+          <div class="grid grid-cols-1 gap-4">
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-white/90 hover:text-white transition-colors duration-300" href="#inicio">Início</a></li>
+              <li><a class="text-white/90 hover:text-white transition-colors duration-300" href="#produtos">Produtos</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="public/main.js"></script>
+  <script>
+    // Reveal hero video only when it can play to avoid flashing fallback
+    (function(){
+      const v = document.getElementById('heroVideo');
+      if (!v) return;
+      const show = () => {
+        v.classList.remove('opacity-0');
+        v.classList.add('opacity-100');
+      };
+      v.addEventListener('canplay', show, { once: true });
+      // Safety: if it doesn't fire quickly (e.g., cached), force show after short delay
+      setTimeout(() => {
+        if (v.classList.contains('opacity-0')) show();
+      }, 600);
+    })();
+  </script>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 hidden items-center justify-center z-[10000] lightbox-backdrop">
+    <button id="lightboxClose" aria-label="Fechar" class="absolute top-4 right-4 rounded-full p-2 bg-white/90 text-zapGray hover:bg-white">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="Visualização do produto" class="max-w-[90vw] max-h-[80vh] rounded-xl ring-1 ring-white/20 shadow-2xl"/>
+  </div>
+</body>
+</html>
+

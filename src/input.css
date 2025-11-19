@@ -1,0 +1,56 @@
+/*
+Portfólio – Landing Page
+Arquivo de estilos base para Tailwind CSS e componentes customizados.
+Use este arquivo para centralizar customizações e facilitar manutenção.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+
+/* Components */
+@layer components {
+  /* Botão principal: usado em CTAs e formulários */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-3 text-white font-semibold shadow-sm transition-colors duration-200 focus:outline-none;
+  /* Gradient primary fallback and visual polish (theme updated) */
+  background-image: linear-gradient(135deg, #6fa1de, #4a86c0);
+  background-color: #6fa1de; /* fallback for environments without gradient */
+  box-shadow: 0 6px 18px rgba(106,161,222,0.09);
+  --tw-ring-color: rgba(111,161,222,0.28);
+  }
+  /* Botão secundário: usado em ações alternativas */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-transparent px-4 py-2 text-zapGray font-medium shadow-sm transition-colors duration-200 border;
+    /* use secondary accent as border by default */
+    border-color: #001D39;
+    color: #001D39;
+  }
+  /* hover uses a subtle blend of secondary -> primary to keep visual harmony */
+  .btn-secondary:hover{ background-image: linear-gradient(135deg,#001D39,#0b2b4a); color:#fff; border-color:#001D39; }
+
+  /* Product badge using the secondary accent */
+  .product-badge {
+    @apply inline-block text-xs font-medium px-2 py-1 rounded-full;
+  background-image: linear-gradient(90deg, #6fa1de, #4a86c0);
+    color: #001D39;
+    box-shadow: 0 2px 8px rgba(0,29,57,0.06);
+  }
+  /* Card: usado para blocos de conteúdo */
+  .card {
+    @apply bg-white rounded-xl shadow-sm ring-1 ring-black/5 p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md;
+  }
+  /* Título de seção */
+  .section-title {
+    @apply text-2xl md:text-3xl font-extrabold text-gray-900;
+  }
+  /* Subtítulo de seção */
+  .section-subtitle {
+    @apply mt-2 text-gray-600 max-w-3xl;
+  }
+}
